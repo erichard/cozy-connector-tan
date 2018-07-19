@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "name": "Connector tan.fr",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.png",
+  "slug": "tanfr",
+  "source": "git@github.com:erichard/cozy-connector-tan.git",
+  "vendor_link": "https://www.tan.fr",
+  "categories": ["transport"],
+  "fields": {
+    "login": {
+      "type": "text"
+    },
+    "password": {
+      "type": "password"
+    },
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
+      }
+    }
+  },
+  "data_types": [
+    "bill"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "bank operations": {
+      "type": "io.cozy.bank.operations"
+    },
+    "bills": {
+      "type": "io.cozy.bills"
+    },
+    "files": {
+      "type": "io.cozy.files"
+    },
+    "accounts": {
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    }
+  },
+  "developer": {
+    "name": "Erwan Richard",
+  },
+  "langs": ["fr"],
+  "locales": {
+    "fr": {
+      "short_description": "Connecteur pour tan.fr",
+      "long_description": "Ce connecteur récupère les factures de la TAN, la société de transport à Nantes.",
+      "permissions": {
+        "bank operations": {
+          "description": "Utilisé pour relier les factures à des operations bancaires"
+        },
+        "bills": {
+          "description": "Utilisé pour sauver les données des factures"
+        },
+        "files": {
+          "description": "Utilisé pour sauvegarder les factures"
+        },
+        "accounts": {
+          "description": "Utilisé pour obtenir les données du compte"
+        }
+      }
+    },
+  },
+  "manifest_version": "2"
+}
